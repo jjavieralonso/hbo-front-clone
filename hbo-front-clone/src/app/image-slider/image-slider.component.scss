@@ -1,0 +1,41 @@
+.image-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-slider .slider-inner {
+  display: flex;
+  width: 100%;
+  min-height: 70%;
+  transition: transform 1s ease-in-out;
+}
+
+.image-slider img {
+  width: 100%;
+  flex-shrink: 0;
+  mask-image: linear-gradient(to top, transparent 45%, black);
+}
+
+.nav-dots {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.nav-dots span {
+  height: 10px;
+  width: 10px;
+  background-color: #adadad;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.nav-dots .active {
+  background-color: #ffffff;
+}

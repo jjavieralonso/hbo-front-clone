@@ -1,0 +1,21 @@
+<div class="image-slider">
+  <div
+    class="slider-inner"
+    [style.transform]="'translateX(' + sliderPosition + ')'"
+  >
+    <img
+      *ngFor="let image of images; index as i"
+      [src]="image"
+      alt="Slider image"
+      [class.active]="i === currentImageIndex"
+    />
+  </div>
+  <div class="nav-dots">
+    <span
+      *ngFor="let image of images; index as i"
+      [class.active]="i === currentImageIndex"
+      (click)="navigateToImage(i)"
+    >
+    </span>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+body {
+  background: linear-gradient(to bottom, #000000, #2a0541);
+  height: 300vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  box-sizing: border-box;
+}
+body.sidebar-open {
+  overflow: hidden;
+}

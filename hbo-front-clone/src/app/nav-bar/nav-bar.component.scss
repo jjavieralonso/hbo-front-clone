@@ -1,0 +1,124 @@
+.first-section-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.first-section-navbar img {
+  width: 24px;
+  height: 24px;
+  padding: 6px 6px 6px 0;
+  cursor: pointer;
+}
+
+.first-section-navbar p {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 800;
+  color: #adadad;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  padding: 6px 12px;
+  margin: 0;
+}
+.first-section-navbar p:hover {
+  color: #ffffff;
+}
+.nav-container {
+  z-index: 99;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-height: 80px;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5) 0.48%,
+    rgba(0, 0, 0, 0.47) 3.73%,
+    rgba(0, 0, 0, 0.443) 6.67%,
+    rgba(0, 0, 0, 0.424) 9.29%,
+    rgba(0, 0, 0, 0.404) 11.98%,
+    rgba(0, 0, 0, 0.384) 14.88%,
+    rgba(0, 0, 0, 0.37) 18.18%,
+    rgba(0, 0, 0, 0.34) 25%,
+    rgba(0, 0, 0, 0.32) 32.4%,
+    rgba(0, 0, 0, 0.28) 39.23%,
+    rgba(0, 0, 0, 0.24) 47.42%,
+    rgba(0, 0, 0, 0.2) 57.17%,
+    rgba(0, 0, 0, 0.12) 68.67%,
+    rgba(0, 0, 0, 0.06) 82.12%,
+    rgba(0, 0, 0, 0) 97.71%
+  );
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 48px;
+  transition-duration: 0.5s;
+}
+
+.nav-container.scrolled {
+  transition-duration: 0.5s;
+  background-color: rgba(15, 15, 15, 0.98);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.98;
+  height: 80px;
+}
+
+.hbo-logo-nav {
+  width: 134px;
+  height: auto;
+}
+
+.second-section-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0 0 16px;
+  gap: 12px;
+}
+.second-section-navbar section {
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+}
+.second-section-navbar section p {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 6px 0px;
+  margin: 0 0 0 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.user-avatar {
+  border: 2px solid rgb(252, 0, 196);
+  border-radius: 50%;
+}
+.search-glass {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+}
+
+app-sidebar {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+.close-sidebar {
+  cursor: pointer;
+  z-index: 110;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+body.sidebar-open {
+  overflow: hidden;
+}

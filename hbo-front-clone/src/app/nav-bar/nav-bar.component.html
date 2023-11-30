@@ -1,0 +1,37 @@
+<div class="nav-container">
+  <div class="first-section-navbar">
+    <img
+      src="assets/images/menu-burger.png"
+      alt="menu-burger"
+      (click)="toggleSidebar()"
+    />
+    <p>Películas</p>
+    <p>Series</p>
+  </div>
+  <img
+    class="hbo-logo-nav"
+    src="assets/images/hbo-logo.png"
+    alt="HBO Max logo"
+  />
+  <div class="second-section-navbar">
+    <img
+      src="assets/images/search-zoom.png"
+      alt="Search bar"
+      class="search-glass"
+    />
+    <section class="user-info">
+      <div>
+        <img src="{{ user.avatar }}" alt="User Avatar" class="user-avatar"/>
+      </div>
+      <p>{{ user.name }}</p>
+    </section>
+  </div>
+</div>
+<img
+  alt="close sidebar"
+  class="close-sidebar"
+  src="assets/images/sidebar/x-btn.png"
+  *ngIf="isBurgerMenuOpen"
+  (click)="toggleSidebar()"
+/>
+<app-sidebar *ngIf="isBurgerMenuOpen"></app-sidebar>
