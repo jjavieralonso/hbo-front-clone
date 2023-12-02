@@ -1,7 +1,10 @@
-<div class="sidebar-container" [style.width.%]="porcentajeSidebar">
-    
+<div
+  class="sidebar-container"
+  [style.width.%]="porcentajeSidebar"
+  [style.transform]="menuOpen ? 'translateX(0)' : 'translateX(-100%)'"
+>
   <ul>
-    <li>Inicio</li>
+    <li (click)="scrollToElement('inicio')">Inicio</li>
     <li>Series</li>
     <li>Películas</li>
     <li>Originales</li>
@@ -9,7 +12,7 @@
     <li>Últimos Días</li>
     <li>Próximamente</li>
     <li>En Tendencia</li>
-    <hr width="100%"/>
+    <hr width="100%" />
     <li>Géneros</li>
     <hr width="100%" />
     <div class="sidebar-brands">
@@ -25,3 +28,11 @@
     </div>
   </ul>
 </div>
+@if(menuOpen){
+<img
+  alt="close sidebar"
+  class="close-sidebar"
+  src="assets/images/sidebar/x-btn.png"
+  (click)="toggleMenu()"
+/>
+}

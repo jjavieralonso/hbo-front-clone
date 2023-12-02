@@ -14,7 +14,9 @@
 .image-slider img {
   width: 100%;
   flex-shrink: 0;
-  mask-image: linear-gradient(to top, transparent 45%, black);
+  object-fit: cover;
+  height: 560px;
+  mask-image: linear-gradient(to top, transparent 100px, black);
 }
 
 .nav-dots {

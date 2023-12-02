@@ -1,0 +1,25 @@
+<div class="trending-container">
+  <div class="trending-title">
+    <h3>Nuestro Top 10</h3>
+    <h2>En tendencia</h2>
+    <p>
+      Las películas y series más vistas en Argentina en los últimos días, ¡no te
+      las pierdas!
+    </p>
+    <button>Explora más</button>
+  </div>
+  <div class="trending-slider">
+    <button (click)="previous()">
+      <img src="assets/svgs/arrow-left.svg" alt="arrow-left" />
+    </button>
+    @for(trend of trends; track trend.trendNumber){
+    <div [style.transform]="'translateX(' + sliderPosition + ')'" class="slider-container">
+        <p>#{{ trend.trendNumber }}</p>
+        <img alt="Trend#{{ trend.trendNumber }}" [src]="trend.trendImage" />
+    </div>
+    }
+    <button (click)="next()">
+      <img src="assets/svgs/arrow-right.svg" alt="arrow-right" />
+    </button>
+  </div>
+</div>

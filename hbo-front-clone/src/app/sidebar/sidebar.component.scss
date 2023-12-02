@@ -13,12 +13,14 @@ ul li {
   list-style: none;
   font-family: "Noto sans", sans-serif;
   color: #adadad;
-  font-weight: 400;
+  font-weight: normal;
   font-size: 20px;
   cursor: pointer;
+  letter-spacing: 0;
 }
 
 ul li:hover {
+  font-weight: 800;
   color: #ffffff;
 }
 ul {
@@ -34,18 +36,28 @@ ul {
   max-width: 70px;
   padding-right: 36px;
 }
-.left-column{
-  padding-left: 36px
+.left-column {
+  padding-left: 36px;
 }
 .sidebar-brands div img {
   max-width: 70px;
   padding-bottom: 36px;
   transition-duration: 0.1s;
 }
-.sidebar-brands div img:hover{
+.sidebar-brands div img:hover {
   scale: 1.05;
 }
 
-hr{
-  border-color:  #adadad;
+hr {
+  border-color: #adadad;
+}
+
+.close-sidebar {
+  cursor: pointer;
+  z-index: 110;
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  width: 24px;
+  height: 24px;
 }

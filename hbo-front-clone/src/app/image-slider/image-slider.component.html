@@ -3,12 +3,13 @@
     class="slider-inner"
     [style.transform]="'translateX(' + sliderPosition + ')'"
   >
-    <img
-      *ngFor="let image of images; index as i"
+    @for(image of images; track index){
+      <img
       [src]="image"
       alt="Slider image"
-      [class.active]="i === currentImageIndex"
+      [class.active]="index === currentImageIndex"
     />
+    }
   </div>
   <div class="nav-dots">
     <span

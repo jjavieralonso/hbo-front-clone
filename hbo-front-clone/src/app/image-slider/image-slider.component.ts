@@ -16,6 +16,7 @@ export class ImageSliderComponent implements OnInit {
     'assets/images/slider/slider-7.jpg',
   ];
   currentImageIndex = 0;
+  index = 0;
 
   ngOnInit() {
     setInterval(() => {
@@ -29,6 +30,6 @@ export class ImageSliderComponent implements OnInit {
     this.currentImageIndex = index;
   }
   get sliderPosition() {
-  return -(this.currentImageIndex * 100) + '%';
-}
+    return -(this.currentImageIndex * 100) + '%';
+  }
 }

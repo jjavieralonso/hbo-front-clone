@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { MenuSideService } from '../menu-side.service';
 
 interface User {
   name: string;
@@ -14,7 +15,10 @@ interface User {
 export class NavBarComponent {
   user: User;
 
-  constructor(private userService: UserService) {
+  constructor(
+    private userService: UserService,
+    private menuService: MenuSideService
+  ) {
     this.user = this.userService.getFirstUser();
     window.addEventListener('scroll', () => {
       const navbar = document.querySelector('.nav-container');
@@ -30,14 +34,7 @@ export class NavBarComponent {
       }
     });
   }
-  isBurgerMenuOpen = false;
-
-  toggleSidebar() {
-    this.isBurgerMenuOpen = !this.isBurgerMenuOpen;
-    if (this.isBurgerMenuOpen) {
-      document.body.classList.add('sidebar-open');
-    } else {
-      document.body.classList.remove('sidebar-open');
-    }
+  toggleMenu() {
+    this.menuService.toggleMenu();
   }
 }

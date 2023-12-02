@@ -3,7 +3,7 @@
     <img
       src="assets/images/menu-burger.png"
       alt="menu-burger"
-      (click)="toggleSidebar()"
+      (click)="toggleMenu()"
     />
     <p>Películas</p>
     <p>Series</p>
@@ -27,11 +27,4 @@
     </section>
   </div>
 </div>
-<img
-  alt="close sidebar"
-  class="close-sidebar"
-  src="assets/images/sidebar/x-btn.png"
-  *ngIf="isBurgerMenuOpen"
-  (click)="toggleSidebar()"
-/>
-<app-sidebar *ngIf="isBurgerMenuOpen"></app-sidebar>
+<app-sidebar></app-sidebar>

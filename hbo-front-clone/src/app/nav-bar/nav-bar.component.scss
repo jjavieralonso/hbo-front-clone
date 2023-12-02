@@ -109,15 +109,6 @@ app-sidebar {
   overflow-y: auto;
   z-index: 100;
 }
-.close-sidebar {
-  cursor: pointer;
-  z-index: 110;
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  width: 24px;
-  height: 24px;
-}
 
 body.sidebar-open {
   overflow: hidden;

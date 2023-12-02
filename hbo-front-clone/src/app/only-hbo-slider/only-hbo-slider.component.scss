@@ -1,0 +1,62 @@
+.only-hbo-container {
+  padding-left: 48px;
+}
+h3 {
+  color: #fff;
+  font-family: "Noto sans", sans-serif;
+}
+
+.movie-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-slider .slider-inner {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.movie-slider img {
+  flex-shrink: 0;
+  max-width: 197px;
+  border: 3px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+.slider-inner img:hover {
+  border-color: rgb(140, 60, 177);
+  opacity: 1;
+}
+.movie-slider button {
+  z-index: 99;
+  position: absolute;
+  height: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.movie-slider button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  img {
+    scale: 1.1;
+  }
+}
+
+.movie-slider button:first-child {
+  left: 0px;
+}
+
+.movie-slider button:last-child {
+  right: 0px;
+}
