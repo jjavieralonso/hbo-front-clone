@@ -1,1 +1,22 @@
-<p>recently-added works!</p>
+<div class="recently-added-container" id="recently-added">
+  <section class="recently-added-title">
+    <h3>Recién añadidos</h3>
+    <h4>No seas el último en verlos.</h4>
+  </section>
+  <div class="recently-added-slider">
+    <button (click)="previous()">
+      <img src="assets/svgs/arrow-left.svg" alt="arrow-left" />
+    </button>
+    @for(i of recentlyAdded; track i){
+    <div
+      class="recently-added-item"
+      [style.transform]="'translateX(' + sliderPosition + ')'"
+    >
+      <img src="{{ i }}" class="recently-added-item-img" />
+    </div>
+    }
+    <button (click)="next()">
+      <img src="assets/svgs/arrow-right.svg" alt="arrow-right" />
+    </button>
+  </div>
+</div>
