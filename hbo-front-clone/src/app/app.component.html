@@ -1,9 +1,11 @@
 <div class="hbo-web">
   <app-nav-bar style="position: relative; z-index: 999"></app-nav-bar>
   <app-image-slider></app-image-slider>
+  <app-watchlist *ngIf="getWatchlistCount() > 0"></app-watchlist>
   <app-only-hbo-slider></app-only-hbo-slider>
   <app-trending-slider></app-trending-slider>
   <app-recently-added></app-recently-added>
+
   <app-footer></app-footer>
 </div>
 

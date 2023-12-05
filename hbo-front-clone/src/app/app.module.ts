@@ -10,6 +10,8 @@ import { OnlyHboSliderComponent } from './components/only-hbo-slider/only-hbo-sl
 import { TrendingSliderComponent } from './components/trending-slider/trending-slider.component';
 import { RecentlyAddedComponent } from './components/recently-added/recently-added.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WatchlistComponent } from './components/watchlist/watchlist.component';
+import { AddWatchlistBtnComponent } from './add-watchlist-btn/add-watchlist-btn.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FooterComponent } from './components/footer/footer.component';
     OnlyHboSliderComponent,
     TrendingSliderComponent,
     RecentlyAddedComponent,
-    FooterComponent
+    FooterComponent,
+    WatchlistComponent,
+    AddWatchlistBtnComponent
   ],
   imports: [
     BrowserModule,

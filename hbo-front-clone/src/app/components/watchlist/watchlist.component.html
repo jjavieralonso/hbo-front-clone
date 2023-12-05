@@ -1,0 +1,20 @@
+<div class="watchlist-container">
+  <h3>Mi lista <img src="assets/svgs/arrow-right.svg" alt="arrow-right" /></h3>
+  <div class="watchlist-slider">
+    <button (click)="previous()">
+      <img src="assets/svgs/arrow-left.svg" alt="arrow-left" />
+    </button>
+    @for(i of movies; track i){
+    <div
+      class="watchlist-item"
+      [style.transform]="'translateX(' + sliderPosition + ')'"
+    >
+      <img src="{{ i.cover }}" class="watchlist-item-img" />
+      <h4>{{ i.title }}</h4>
+    </div>
+    }
+    <button (click)="next()">
+      <img src="assets/svgs/arrow-right.svg" alt="arrow-right" />
+    </button>
+  </div>
+</div>

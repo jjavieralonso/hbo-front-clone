@@ -18,7 +18,7 @@ h3 {
   transition: transform 0.4s ease-in-out;
 }
 
-.movie-slider img {
+.movie-cover {
   flex-shrink: 0;
   max-width: 197px;
   border: 3px solid transparent;
@@ -27,11 +27,11 @@ h3 {
   opacity: 0.8;
 }
 
-.slider-inner img:hover {
+.movie-cover:hover {
   border-color: rgb(140, 60, 177);
   opacity: 1;
 }
-.movie-slider button {
+.btn-nav {
   z-index: 99;
   position: absolute;
   height: 300px;
@@ -45,17 +45,21 @@ h3 {
   transition-duration: 0.5s;
 }
 
-.movie-slider button:hover {
+.btn-nav:hover {
   background: rgba(0, 0, 0, 0.8);
   img {
     scale: 1.1;
   }
 }
 
-.movie-slider button:first-child {
+.btn-nav:first-child {
   left: 0px;
 }
 
-.movie-slider button:last-child {
+.btn-nav:last-child {
   right: 0px;
+}
+
+.movie-cover-container {
+  position: relative;
 }

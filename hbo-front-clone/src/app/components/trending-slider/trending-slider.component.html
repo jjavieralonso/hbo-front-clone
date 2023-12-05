@@ -19,6 +19,7 @@
     >
       <p># {{ i + 1 }}</p>
       <img alt="Trend#{{ i + 1 }}" [src]="trend.cover" />
+      <app-add-watchlist-btn [movie]="trend"></app-add-watchlist-btn>
     </div>
     <button (click)="next()">
       <img src="assets/svgs/arrow-right.svg" alt="arrow-right" />

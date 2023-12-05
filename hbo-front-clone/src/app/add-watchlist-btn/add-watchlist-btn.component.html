@@ -1,0 +1,4 @@
+<button (click)="toggleWatchlist()" class="btn-add-watchlist">
+    <span *ngIf="!isInWatchlist"><img src="assets/svgs/plus.svg" alt="add"></span>
+    <span *ngIf="isInWatchlist"><img src="assets/svgs/check.svg" alt="already added"></span>
+</button>

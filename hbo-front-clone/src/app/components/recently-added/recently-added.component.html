@@ -13,6 +13,7 @@
       [style.transform]="'translateX(' + sliderPosition + ')'"
     >
       <img src="{{ i.cover }}" class="recently-added-item-img" />
+      <app-add-watchlist-btn [movie]="i"></app-add-watchlist-btn>
     </div>
     }
     <button (click)="next()">

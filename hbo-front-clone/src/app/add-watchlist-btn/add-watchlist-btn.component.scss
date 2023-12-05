@@ -1,0 +1,27 @@
+.btn-add-watchlist {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.5;
+  border-radius: 50%;
+  border: none;
+  padding: 6px;
+  background-color: #fff;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+span img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 

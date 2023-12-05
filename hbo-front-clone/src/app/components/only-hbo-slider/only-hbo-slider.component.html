@@ -1,20 +1,22 @@
 <div class="only-hbo-container" id="inicio">
   <h3>Solo en HBO Max</h3>
   <div class="movie-slider">
-    <button (click)="previous()">
+    <button (click)="previous()" class="btn-nav">
       <img src="assets/svgs/arrow-left.svg" alt="arrow-left" />
     </button>
     <div
       class="slider-inner"
       [style.transform]="'translateX(' + sliderPosition + ')'"
     >
-      <img
+      <div
         *ngFor="let movie of movies; index as i"
-        [src]="movie.cover"
-        alt={{movie.name}}
-      />
+        class="movie-cover-container"
+      >
+        <img [src]="movie.cover" alt="{{ movie.name }}" class="movie-cover"/>
+        <app-add-watchlist-btn  [movie]="movie"></app-add-watchlist-btn>
+      </div>
     </div>
-    <button (click)="next()">
+    <button (click)="next()" class="btn-nav">
       <img src="assets/svgs/arrow-right.svg" alt="arrow-right" />
     </button>
   </div>
