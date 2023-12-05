@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-only-hbo-slider',
@@ -6,27 +7,17 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './only-hbo-slider.component.scss',
 })
 export class OnlyHboSliderComponent {
-  movies = [
-    'assets/images/slider-1/1.jpg',
-    'assets/images/slider-1/2.jpg',
-    'assets/images/slider-1/3.jpg',
-    'assets/images/slider-1/4.jpg',
-    'assets/images/slider-1/5.jpg',
-    'assets/images/slider-1/6.jpg',
-    'assets/images/slider-1/7.jpg',
-    'assets/images/slider-1/8.jpg',
-    'assets/images/slider-1/9.jpg',
-    'assets/images/slider-1/10.jpg',
-    'assets/images/slider-1/11.jpg',
-    'assets/images/slider-1/12.jpg',
-    'assets/images/slider-1/13.jpg',
-  ];
+  constructor(private movieService: MovieService){
+
+  }
+  movies : any[] = [];
   firstVisibleIndex = 0;
   visibleCards = 0;
   cardWidth = 197;
 
   ngOnInit() {
     this.calculateVisibleCards();
+    this.movies = this.movieService.getOnlyInHBO();
   }
 
   @HostListener('window:resize')

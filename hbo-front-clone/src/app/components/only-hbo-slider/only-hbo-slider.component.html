@@ -10,8 +10,8 @@
     >
       <img
         *ngFor="let movie of movies; index as i"
-        [src]="movie"
-        alt="Movie image"
+        [src]="movie.cover"
+        alt={{movie.name}}
       />
     </div>
     <button (click)="next()">

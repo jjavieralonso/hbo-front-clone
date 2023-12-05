@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from '../services/user.service';
-import { MenuSideService } from '../menu-side.service';
+import { UserService } from '../../services/user.service';
+import { MenuSideService } from '../../services/menu-side.service';
 
 interface User {
   name: string;

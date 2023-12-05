@@ -12,7 +12,6 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  font-family: "Noto sans", sans-serif;
   width: 40%;
 
   h3 {
@@ -33,7 +32,6 @@
   button {
     padding: 12px 20px;
     font-size: 15px;
-    font-family: "Noto sans", sans-serif;
     background-color: rgba(62, 59, 68, 0.7);
     border: none;
     color: white;
@@ -83,7 +81,6 @@
     top: -2px;
     left: -2px;
     background-color: #fff;
-    font-family: "Noto sans", sans-serif;
     z-index: 99;
     padding: 2px 8px;
     font-size: 12px;

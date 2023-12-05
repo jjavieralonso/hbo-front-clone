@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-recently-added',
@@ -6,28 +7,16 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './recently-added.component.scss',
 })
 export class RecentlyAddedComponent {
-  recentlyAdded = [
-    'assets/images/added-covers/black-power.jpg',
-    'assets/images/added-covers/reason.jpg',
-    'assets/images/added-covers/mario-bros.jpg',
-    'assets/images/added-covers/jokers.jpg',
-    'assets/images/added-covers/prancer.jpg',
-    'assets/images/added-covers/blue-beetle.jpg',
-    'assets/images/added-covers/campeones.jpg',
-    'assets/images/added-covers/nocivo.jpg',
-    'assets/images/added-covers/were-here.jpg',
-    'assets/images/added-covers/mon-heroine.jpg',
-    'assets/images/added-covers/foreman.jpg',
-    'assets/images/added-covers/peak.jpg',
-    'assets/images/added-covers/genie.jpg',
-    'assets/images/added-covers/love-has-won.jpg',
-  ];
-  
+  recentlyAdded: any[] = [];
+
+  constructor(private movieService: MovieService) {}
+
   firstVisibleIndex = 0;
   visibleCards = 0;
   cardWidth = 300;
 
   ngOnInit() {
+    this.recentlyAdded = this.movieService.getRecentlyAdded();
     this.calculateVisibleCards();
   }
 
@@ -45,7 +34,10 @@ export class RecentlyAddedComponent {
   }
 
   next() {
-    if (this.firstVisibleIndex < this.recentlyAdded.length - this.visibleCards) {
+    if (
+      this.firstVisibleIndex <
+      this.recentlyAdded.length - this.visibleCards
+    ) {
       this.firstVisibleIndex++;
     }
   }
